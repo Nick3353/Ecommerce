@@ -1,3 +1,4 @@
+
    
 module.exports = {
   content: [
@@ -16,7 +17,11 @@ module.exports = {
 
         less :'#CCCCCC',
         textColor:'#333333',
-        stroke:'#E99517'
+        stroke:'#E99517',
+        more :'#FF8900',
+        non:'#F9F9F9',
+        nan:'#F6F6F8',
+        linear:'#EC5937',
        
       },
     },

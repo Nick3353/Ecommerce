@@ -1,8 +1,10 @@
+
 import React, { useState } from "react";
-import { logo, Bars } from "../assets";
+import { logo, Bars, win_kitchen } from "../assets";
 import { FaCartPlus, FaSearch, FaBars } from "react-icons/fa";
 import SearchBar from "./SearchBar";
 import Dropdown from "./Dropdown ";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -68,6 +70,23 @@ const Navbar = () => {
                 Sign Up
               </button>
             </div>
+            <div className="bg-primary w-1/2 h-[25rem] absolute top-0 right-0  -z-20 rounded-bl-full hidden lg:block text-white pt-28 pl-5 px-10">
+              <ul className="flex flex-col justify-center items-end gap-5 text-xl font-semibold ">
+                <li className="flex justify-center items-center cursor-pointer">
+                  <Link to="">Food App</Link>
+                  <img src={win_kitchen} alt="" />
+                </li>
+                <li>
+                  <Link to="">Accessories</Link>
+                </li>
+                <li>
+                  <Link to="">Latops</Link>
+                </li>
+                <li>
+                  <Link to="">Watch</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="flex items-center justify-between mt-4 lg:hidden">
@@ -82,20 +101,11 @@ const Navbar = () => {
               )}
             </div>
           </div>
-          <img
-            src={Bars}
-            alt=""
-            onClick={ToggleMobile}
-            className="pl-5"
-          />
+          <img src={Bars} alt="" onClick={ToggleMobile} className="pl-5" />
         </div>
       </div>
 
-      {isMobileOpen && (
-        <div className="relative w-full ">
-    asdad
-        </div>
-      )}
+      {isMobileOpen && <div className="relative w-full ">asdad</div>}
     </div>
   );
 };

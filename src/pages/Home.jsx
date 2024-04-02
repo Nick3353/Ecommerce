@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import Carousel from "../components/Carousel";
+// import EmailInput from '../components/EmailInput'
 import ReusableCarousel from "../components/ReusableCarousel";
 import {
   food,
@@ -13,32 +15,44 @@ import {
   iphone12,
   brown_jacket,
   hd_monitor,
+  cta_img,
+  Astore,
+  Gplay,
+  ads,
+  chops,
+  chops1,
+  chops2,
+  chops3,
 } from "../assets/index";
+import { FaCartPlus } from "react-icons/fa";
 import LazyLoad from "../components/LazyLoad";
 
 function Home() {
   const Trending = [
     {
       imageUrl: casio_watch,
-      name: "Product 1",
+      name: "Casio watch",
       price: "$10",
+      tag: "free delivery",
     },
     {
       imageUrl: iphone12,
-      name: "Product 2",
+      name: "iphone",
       price: "$20",
+      tag: "free delivery",
     },
     {
       imageUrl: brown_jacket,
-      name: "Product 3",
+      name: "Brown Jacket",
       price: "$15",
+      tag: "free delivery",
     },
     {
       imageUrl: hd_monitor,
-      name: "Product 4",
+      name: "HD IPD Display",
       price: "$25",
+      tag: "free delivery",
     },
-    // Add more slide objects as needed
   ];
   const categoriesData = [
     {
@@ -55,7 +69,7 @@ function Home() {
     },
     {
       name: "Casio watch",
-      image: sneaker, // Assuming the image should be different
+      image: sneaker,
     },
     {
       name: "Win Kitchen",
@@ -103,8 +117,115 @@ function Home() {
 
       {/* Trending Sectoin  */}
       <div>
-        <ReusableCarousel title="Trending" itemsToShow={4} slides={Trending} />
+        <Carousel title="Trending" itemsToShow={4} slides={Trending} />
       </div>
+
+      {/* CTA Section  */}
+
+      <div className="bg-more w-max-screen-lg  flex  justify-between items-center  text-textColor relative overflow-x-hidden">
+        <div className=" hidden lg:block">
+          <img src={cta_img} alt="" className=" sm:" />
+        </div>
+        <div className=" p-10">
+          <div className="bg-white text-5xl font-bold w-max px-8 py-4  -rotate-6">
+            <h1 className="rotate-6">PAYDAY</h1>
+          </div>
+          <div className="pt-10 flex flex-col gap-3  ">
+            <h1 className="font-bold text-5xl">SALE NOW</h1>
+            <p className="text-xl font-medium">
+              There are many variations of passages of Lorem available
+            </p>
+            <h3 className="text-2xl font-semibold">1 June - 10 July 2021</h3>
+            <p className=" font-medium text-xl">#Terms & Conditions apply</p>
+            <div>
+              <button className="flex justify-center items-center gap-2 p-2 bg-secondary-200 text-white">
+                Add To Cart
+                <FaCartPlus />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* CTA Section  */}
+
+      {/* featured Product */}
+      <div>
+        <ReusableCarousel
+          title="Featured Products"
+          itemsToShow={4}
+          slides={Trending}
+        />
+      </div>
+      {/* featured Product */}
+
+      {/* Top Sales */}
+      <div>
+        <ReusableCarousel title="Top Sales" itemsToShow={4} slides={Trending} />
+      </div>
+      {/* Top Sales */}
+
+      {/* CTA Section2 */}
+      <div className="bg-nan w-max-screen-lg  flex  justify-evenly items-center  text-textColor relative overflow-x-hidden">
+        <div className=" p-10 lg:w-1/2">
+          <div className="bg-primary text-white text-5xl font-bold w-max px-8 py-4  -rotate-6">
+            <h1 className="rotate-6">PAYDAY</h1>
+          </div>
+          <div className="pt-10 flex flex-col gap-3  ">
+            <h1 className="font-bold text-3xl lg:text-5xl">
+              DOWNLOAD APP & GET THE COUPON
+            </h1>
+            <h1 className="">
+              Get 30% off on your first transaction using Winmart mobile app for
+              now
+            </h1>
+            <div className="flex">
+              <img src={Gplay} alt="" />
+              <img src={Astore} alt="" />
+            </div>
+          </div>
+        </div>
+        <div className=" hidden lg:block">
+          <img src={ads} alt="" className=" sm:" />
+        </div>
+      </div>
+      {/* CTA Section2 */}
+
+      {/* chob & Hubs */}
+      <div className=" flex justify-evenly px-5 flex-col lg:flex-row lg:px-20 items-center gap-10 pt-10 ">
+        <div className="lg:w-1/2 ">
+          <h1 className="font-bold text-3xl lg:text-5xl">
+            AVAILABLE STORES ON WINMART
+          </h1>
+          <p className="py-5">
+            Get 30% off on your first transaction using Winmart mobile app for
+            now
+          </p>
+          <button className="flex justify-center items-center gap-2 p-2 bg-secondary-200 text-white mt-10">
+            Add To Cart
+            <FaCartPlus />
+          </button>
+        </div>
+        <div className="grid grid-cols-2">
+          <img src={chops} alt="" />
+          <img src={chops1} alt="" />
+          <img src={chops2} alt="" />
+          <img src={chops3} alt="" />
+        </div>
+      </div>
+      {/* chob & Hubs */}
+
+      {/* CTA Section 3 */}
+      <div className="bg-more flex justify-center items-center text-white">
+            <div className=" text-center py-20">
+              <h1 className="font-bold text-3xl lg:text-5xl">JOIN WINMART COMMUNITY TO GET <br/> MONTHLY PROMO</h1>
+              <p className="text-xl pt-3">Type your email down below and be wild for big promos</p>
+
+              <div className="email">
+              {/* <EmailInput/> */}
+              </div>
+            </div>
+      </div>
+      {/* CTA Section 3 */}
     </React.Fragment>
   );
 }
