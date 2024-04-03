@@ -52,18 +52,25 @@ const ReusableCarousel = ({ title, itemsToShow, slides }) => {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="  items-center lg:px-10 overflow-none ">
-            <img src={slide.imageUrl} alt={slide.name} className="w-full  object-contain bg-less rounded-tr-2xl rounded-tl-2xl" />
+          <div key={index} className=" lg:px-16 overflow-hidden  ">
+            <img
+              src={slide.imageUrl}
+              alt={slide.name}
+              className="w-full  object-contain bg-less rounded-tr-2xl rounded-tl-2xl"
+            />
             <div className="flex justify-evenly items-end bg-non  h-max py-5 rounded-br-xl rounded-bl-xl ">
               <div className="flex  flex-col  items-start gap-1">
                 <p className="mt-2 text-center font-semibold">{slide.name}</p>
                 <p className="text-center">{slide.price}</p>
                 <p className="text-center">{slide.tag}</p>
-                <button className="border-2 border-stroke p-2 rounded-xl">Get Now</button>
+                <button className="border-2 border-stroke p-2 rounded-xl">
+                  Get Now
+                </button>
               </div>
               <div className="">
-                <p className="text-center  text-2xl lg:text-3xl font-semibold ">{slide.price}</p>
-                
+                <p className="text-center  text-2xl lg:text-3xl font-semibold ">
+                  {slide.price}
+                </p>
               </div>
             </div>
           </div>

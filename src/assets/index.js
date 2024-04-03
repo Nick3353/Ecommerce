@@ -20,7 +20,8 @@ import chops from "./images/chops.png"
 import chops1 from "./images/chops1.png"
 import chops2 from "./images/chops2.png"
 import chops3 from "./images/chops3.png"
-export {
+ 
+ export {
   Bars,
   logo,
   food,

@@ -1,40 +1,29 @@
-
 import React, { useState } from "react";
 import { logo, Bars, win_kitchen } from "../assets";
-import { FaCartPlus, FaSearch, FaBars } from "react-icons/fa";
+import { FaCartPlus, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import SearchBar from "./SearchBar";
 import Dropdown from "./Dropdown ";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("");
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  // Array of categories
-  const categories = [
-    "Sneakers",
-    "Men clothes",
-    "Ladies",
-    "Casio watches",
-    "Win Kitchen",
-    "Stores",
-  ];
-
-  //  adding items to cart
   const AddToCart = () => {
     setCartCount(cartCount + 1);
   };
 
-  // category selection
   const CategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
 
-  // toggle mobile  visibility
   const ToggleMobile = () => {
     setIsMobileOpen(!isMobileOpen);
+  };
+
+  const CloseMobileNav = () => {
+    setIsMobileOpen(false);
   };
 
   return (
@@ -105,7 +94,43 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isMobileOpen && <div className="relative w-full ">asdad</div>}
+      {isMobileOpen && (
+        <div className=" w-full  text-white">
+          <div
+            className="bg-textColor bg-opacity-50 w-full h-[100vh] absolute z-20 top-0 left-0 p-5"
+            style={{ backdropFilter: "blur(10px)" }}
+          >
+            <div>
+              <button
+                className="bg-textColor bg-opacity-20 p-1"
+                onClick={CloseMobileNav}
+              >
+                <FaTimes />
+              </button>
+            </div>
+            <div className="">
+              <ul className="flex flex-col  items-end gap-5 text-lg font-semibold ">
+                <button className="px-8  py-1 border-stroke bg-secondary-200 border-2 rounded-xl font-semibold text-lg text-white">
+                  Sign Up
+                </button>
+                <li className="flex justify-center items-center cursor-pointer ">
+                  <Link to="">Food App</Link>
+                  <img src={win_kitchen} alt="" />
+                </li>
+                <li>
+                  <Link to="">Accessories</Link>
+                </li>
+                <li>
+                  <Link to="">Latops</Link>
+                </li>
+                <li>
+                  <Link to="">Watch</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

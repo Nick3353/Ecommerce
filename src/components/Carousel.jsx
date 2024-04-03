@@ -39,7 +39,7 @@ const Carousel = ({ title, itemsToShow, slides }) => {
   };
 
   return (
-    <div className="w-full max-w-screen-g lg:px-20 mx-auto pt-20 p-4 ">
+    <div className="w-full max-w-screen-g lg:px-20 mx-auto pt-20 p-10 ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">{title}</h2>
         <div className="flex gap-5">
@@ -53,7 +53,7 @@ const Carousel = ({ title, itemsToShow, slides }) => {
       </div>
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="  items-center lg:px-10 ">
+          <div key={index} className="  items-center p-5 g:px-10 ">
             <img src={slide.imageUrl} alt={slide.name} className="w-full bg-less" />
             <div className="flex justify-evenly items-center  ">
               <div className="flex  flex-col  items-start">
