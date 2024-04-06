@@ -24,7 +24,7 @@ const ReusableCarousel = ({ title, itemsToShow, slides }) => {
 
   const settings = {
     infinite: true,
-    speed: 999,
+    speed: 500,
     slidesToShow: itemsToShow,
     slidesToScroll: 1,
     responsive: [
