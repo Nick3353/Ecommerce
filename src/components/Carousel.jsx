@@ -24,7 +24,7 @@ const Carousel = ({ title, itemsToShow, slides }) => {
 
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 5000,
     slidesToShow: itemsToShow,
     slidesToScroll: 1,
     responsive: [
