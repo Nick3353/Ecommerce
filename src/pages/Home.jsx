@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
@@ -34,7 +35,7 @@ import { Trending, categoriesData, categories } from "./Homedata.js";
 function Home() {
   return (
     <React.Fragment>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden"> 
 
       {/* Navigation Bar */}
       <Navbar />
@@ -76,22 +77,22 @@ function Home() {
 
       {/* CTA Section  */}
 
-      <div className="bg-more w-max-screen-lg  flex  justify-between items-center  text-textColor relative overflow-x-hidden">
+      <div className="bg-more w-max-screen-lg  flex  lg:justify-between md:justify-start items-center  text-textColor relative overflow-hidden">
         <div className="  lg:block  ">
           <img
             src={cta_img}
             alt=""
-            className=" absolute lg:relative top-0 -right-56 -rotate-12 lg:rotate-0 "
+            className=" absolute lg:relative top-0 -right-64 -rotate-12 lg:rotate-0 "
           />
         </div>
         <div className=" p-10">
           <div className="bg-white text-5xl font-bold w-max px-8 py-4  -rotate-6">
             <h1 className="rotate-6">PAYDAY</h1>
           </div>
-          <div className="pt-10 flex flex-col gap-3  ">
+          <div className="pt-10 flex flex-col gap-3 w-full  ">
             <h1 className="font-bold text-5xl">SALE NOW</h1>
             <p className="text-xl font-medium">
-              There are many variations of passages of Lorem available
+              There are many variations of <br/> passages of Lorem available
             </p>
             <h3 className="text-2xl font-semibold">1 June - 10 July 2021</h3>
             <p className=" font-medium text-xl">#Terms & Conditions apply</p>
