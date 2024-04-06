@@ -1,4 +1,3 @@
-
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -62,13 +61,13 @@ function LazyLoad() {
       title: "Hoodie",
       description:
         "There are many variations of passages of Lorem Ipsum available",
-      imageUrl: hero_img,
+      imageUrl: hero_imge,
     },
     {
       title: "T-Shirt",
       description:
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-      imageUrl: hero_imge,
+      imageUrl: hero_img,
     },
   ];
 
