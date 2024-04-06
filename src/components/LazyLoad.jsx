@@ -17,7 +17,7 @@ function SliderItem({ title, description, imageUrl }) {
           <h1>03</h1>
           <div className="w-1 h-[58px] bg-less "></div>
         </div>
-        <div className="flex flex-col  gap- justify-center w-44 lg:w-1/2 lg:p-20 lg:text-textColor md:pt-10">
+        <div className="flex flex-col   justify-center w-44 lg:w-1/2 lg:p-20 lg:text-textColor md:pt-10">
           <h1 className="font-bold text-5xl lg:text-9xl lg:text-secondary-300">
             {title}
           </h1>
